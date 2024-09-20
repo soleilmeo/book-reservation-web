@@ -1,0 +1,171 @@
+/*
+CSS for book editor (not supported as of now)
+*/
+
+.editor-questions {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    padding: 12px;
+    background-color: #e6e6e9;
+    border-radius: 8px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+    .editor-questions {
+        height: 700px;
+    }
+}
+
+.editor-question-load-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.65;
+    right:0;
+    top:0;
+    z-index: 99;
+}
+
+.editor-questions-container {
+    width: 100%;
+    height: auto;
+}
+
+.editor-question {
+    position: relative;
+    margin-bottom: 12px;
+    border-color: #303030;
+    border-width: 1px;
+    border-style: solid;
+    color: #303030;
+    width: 100%;
+    padding: 8px 12px 8px 12px;
+    background-color: rgb(252, 252, 252);
+    border-radius: 12px;
+}
+
+.editor-questions-add {
+    border-color: #505050;
+    border-width: 1px;
+    border-style: solid;
+    color: #505050;
+    text-align: center;
+    width: 100%;
+    padding: 8px 12px 8px 12px;
+    background-color: whitesmoke;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.editor-questions-add * {
+    margin: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.editor-questions-add:hover {
+    background-color: rgb(235, 235, 235);
+    border-color: #4e4e4e;
+}
+
+.editor-questions-add:active {
+    background-color: rgb(211, 211, 211);
+    border-color: #444444;
+}
+
+/*--------------*/
+
+.question-banner-upload {
+    position: relative;
+    overflow: hidden;
+    width: min(200px, 100vw);
+    height: min(200px, 100vw);
+    background-color: rgb(235, 235, 235);
+    border-radius: 8px;
+    border-color: #505050;
+    border-width: 2px;
+    border-style: dashed;
+
+    text-align: center;
+    transition: all 0.5s ease;
+
+    cursor: pointer;
+}
+
+.question-banner-upload p {
+    user-select: none;
+    margin-bottom: 1px;
+    font-size: 12px;
+}
+
+.question-banner-upload .question-banner-upload-sym {
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.5;
+    margin-bottom: 6px;
+    max-width: 40px;
+    max-height: 40px;
+    transition: all 0.5s ease;
+}
+
+.question-banner-upload .question-banner-visual {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: opacity 0.5s ease;
+}
+
+.question-banner-upload:hover {
+    background-color: rgb(216, 216, 216);
+    transform: scale(1.025);
+}
+
+.question-banner-upload:active {
+    transform: scale(0.95);
+}
+
+.question-banner-upload:hover .question-banner-visual {
+    opacity: 0.25;
+}
+
+.question-delete {
+    position: absolute;
+    border: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #303030;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    top: 12px;
+    right: 12px;
+    opacity: 0.5;
+
+    text-align: center;
+}
+
+.question-delete img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.question-field {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .question-field {
+        width: calc(100% - 42px);
+    }
+}
