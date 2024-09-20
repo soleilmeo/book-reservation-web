@@ -1,0 +1,359 @@
+/*
+base design template
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#PAGE-FITTER {
+    min-height: calc(100vh - 56px - 145px);
+}
+
+/*
+--- Input
+*/
+.no-interact {
+    user-select: none;
+    pointer-events: none;
+}
+
+.no-pointer {
+    pointer-events: none;
+}
+
+.no-select {
+    user-select: none;
+}
+
+/*
+--- Text
+*/
+
+/* Adaptive headers, display-2,3,4 */
+@media (max-width: 768px) {
+    .display-2.display-2-fluid {
+        font-size: 4.5rem;
+    }
+    .display-3.display-3-fluid {
+        font-size: 3.5rem;
+    }
+    .display-4.display-4-fluid {
+        font-size: 2.5rem;
+    }
+    h1.h1-fluid {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-2.display-2-fluid {
+        font-size: 3.4rem;
+    }
+    .display-3.display-3-fluid {
+        font-size: 2.6rem;
+    }
+    .display-4.display-4-fluid {
+        font-size: 1.9rem;
+    }
+    h1.h1-fluid {
+        font-size: 1.9rem;
+    }
+}
+
+
+
+/*
+--- Design
+*/
+
+#CTA {
+    padding-bottom: 32px;
+}
+
+#BOOKRECOMMEND {
+    min-width: 300px;
+}
+
+@media (min-width: 1200px) {
+    #BOOKRECOMMEND {
+        max-width: 300px;
+    }   
+}
+
+#featuredBooks {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.frontpage-bg {
+    height: min(50%, 300px);
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.bookpage-bg {
+	width: 100vw;
+	height: max(420px, 80vh);
+	background-image: rgba(0, 0, 0, 0);
+	background-position: center;
+	background-size: cover;
+}
+
+.bookpage-editor-bg {
+	width: 100vw;
+	height: max(250px, 30vh);
+	background-image: rgba(0, 0, 0, 0);
+	background-position: center;
+	background-size: cover;
+}
+
+.bookcard {
+    height: 100%;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.45s ease-out !important;
+}
+
+.bookcard:hover {
+    transform: scale(1.025);
+    background-position: 55%;
+}
+
+.bookcard:active {
+    transform: scale(1);
+    background-position: 55%;
+}
+
+.bookcard-container {
+    overflow-wrap: break-word;
+    height: 400px;
+}
+
+.bookcard-container-mini {
+    overflow-wrap: break-word;
+    height: 300px;
+}
+
+.bookcard-container a {
+    color: lightblue;
+}
+
+.bookcard-container-mini p {
+    font-size: 14px;
+}
+
+.book-rating p {
+    user-select: none;
+    pointer-events: none;
+}
+
+.book-rating .fa {
+    user-select: initial;
+    pointer-events: initial;
+    color: gray;
+    transition: transform 0.125s ease, color 0.125s ease;
+}
+
+.book-rating .fa:hover {
+    color: darkgrey
+}
+
+.book-rating .fa:active {
+    transform: scale(1.25);
+}
+
+.book-rating .fa.fa-thumbs-up:active, .book-rating .fa-thumbs-up.rated {
+    color: green;
+}
+
+.book-rating .fa.fa-thumbs-down:active, .book-rating .fa-thumbs-down.rated {
+    color: red;
+}
+
+.book-rating-container {
+    background-color: #ececef;
+}
+
+span.nav-anchor {
+    margin-top: 56px; /* nav height */
+    display: block;
+    width: 100vw;
+    visibility: hidden;
+    position: relative;
+}
+
+.profile-bg {
+    width: 100%;
+    height: max(40vh, 150px);
+    background-position: center;
+    background-size: cover;
+}
+
+.profile-pfp {
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+    border-radius: 50%;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-pfp.profile-pfp-big {
+    width: 150px;
+    height: 150px;
+}
+
+@media (min-width: 768px) {
+    .profile-pfp.profile-pfp-big {
+        width: 150px;
+        height: 150px;
+    }   
+}
+
+/* Essential Web Things */
+.web-resize-none {
+    resize: none;
+}
+
+.web-big-lead {
+    font-size: 2rem !important;
+}
+
+@media (min-width: 768px) {
+    .web-w-md-0 {
+        width: 0 !important;
+    }
+}
+
+.web-flex-grow-2 {
+    flex-grow: 2 !important;
+}
+
+.web-light-outline-primary {
+    color: white;
+    border-color: white;
+}
+
+.web-light-outline-success {
+    color: lime;
+    border-color: lime;
+}
+
+.web-default-bottom-margin *:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.web-comment {
+    position: relative;
+    width: 100%;
+    padding: 4px 12px;
+    background-color: #ececef;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.web-comment:hover {
+    background-color:#f2f2f9;
+}
+
+.web-color-trans-smooth {
+    transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.web-red-textbox-border {
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.web-comment p {
+    margin-bottom: 8px;
+}
+
+.web-comment-profile {
+    position: sticky;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+    top: 62px;
+    width: 64px;
+    height: 64px;
+    margin-right: 1rem;
+
+    background-position: center;
+    background-size: cover;
+
+    user-select: none;
+}
+
+.web-replies-container {
+    width: calc(100% - 90px);
+    margin-left: 90px;
+}
+
+.web-btn-morereplies {
+    margin-left: 96px;
+    width: calc(100% - 96px);
+}
+
+.web-btn-morecomments {
+    width: 100%;
+}
+
+.web-comment-delete-button {
+    position:absolute;
+    top:4px;
+    right:4px;
+    width:24px;
+    height:24px;
+    transition: transform 0.25s ease;
+}
+
+.web-comment-delete-button:hover {
+    transform: scale(1.25);
+}
+
+.web-comment-delete-button:active {
+    transform: scale(0.8);
+}
+
+.web-reverse-transparent-hover {
+    opacity: 0.25;
+    transition: opacity 0.25s ease;
+}
+
+.web-reverse-transparent-hover:hover {
+    opacity: 0.5;
+}
+
+.web-reverse-transparent-hover:active {
+    opacity: 0.75;
+}
+
+@media (max-width: 576px) {
+    .web-img-thumbnail-container {
+        height: 320px;
+    }    
+}
+
+.web-img-thumbnail-container {
+    background-color: #f8f8fa;
+    height: 412px;
+    display: inline-block;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: #bfbfbf;
+}

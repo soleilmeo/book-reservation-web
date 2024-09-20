@@ -1,0 +1,61 @@
+.profile-pfp-slot {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: white;
+
+    text-align: center;
+    text-shadow: 0 0 5px black;
+    transition: transform 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+.profile-pfp-slot.cover .profile-preview-pfp {
+    position: absolute;
+    left:-10000%; right: -10000%; 
+    top: -10000%; bottom: -10000%;
+    margin: auto auto;
+    min-width: 1000%;
+    min-height: 1000%;
+    -webkit-transform:scale(0.1);
+    transform: scale(0.1);
+}
+
+.profile-pfp-slot-design {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    pointer-events: none;
+    user-select: none;
+    border-style: dashed;
+    border-width: 4px;
+    border-color: lightgray;
+    color: gray;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.profile-pfp-slot:hover {
+    transform: scale(1.05);
+    color: white;
+    cursor: pointer;
+}
+.profile-pfp-slot:hover .profile-pfp-slot-design {
+    background-color: rgba(50, 50, 50, 0.2);
+    border-color: #a6a6a6;
+}
+
+.profile-pfp-slot:active {
+    transform: scale(0.98);
+}
+.profile-pfp-slot:active .profile-pfp-slot-design{
+    background-color: rgba(20, 20, 20, 0.3);
+    border-color: #a0a0a0;
+}
+
+.profile-preview-pfp {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
